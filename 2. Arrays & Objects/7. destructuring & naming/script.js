@@ -21,9 +21,16 @@ const todo = {
 };
 
 const {
-  id,
+  id: todoId,
   title,
   user: { name },
 } = todo;
 
-console.log(name);
+console.log(todoId);
+
+// Destructure arrays
+const numbers = [23, 67, 33, 49, 52];
+
+const [first, second, ...rest] = numbers;
+
+console.log(first, second, rest);
