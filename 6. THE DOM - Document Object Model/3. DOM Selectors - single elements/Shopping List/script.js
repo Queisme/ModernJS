@@ -1,35 +1,44 @@
-let output;
+// document.getElementById()
 
-// output = document.all;
-// output = document.all[10];
+console.log(document.getElementById('app-title'));
+console.log(document.getElementById('app-title').id);
+console.log(document.getElementById('app-title').className);
+console.log(document.getElementById('app-title').getAttribute('id'));
 
-output = document.documentElement;
-output = document.head;
-output = document.body;
-output = document.head.children;
-output = document.body.children;
+// Set attributes
 
-output = document.doctype;
-output = document.domain;
-output = document.URL;
-output = document.characterSet;
-output = document.contentType;
+document.getElementById('app-title').title = 'Shopping List';
+document.getElementById('app-title').setAttribute('class', 'title');
 
-output = document.forms;
-output = document.forms[0];
-output = document.forms[0].id;
-output = document.forms[0].method;
-output = document.forms[0].action;
+const title = document.getElementById('app-title');
 
-//document.forms[0].id = 'new-id';
+console.log(title);
 
-output = document.links;
-output = document.images;
-output = document.images[0];
-output = document.images[0].src;
+//Get/Change content
+console.log(title.textContent);
+title.textContent = 'Hello World';
+title.innerText = 'And again';
+title.innerHTML = '<strong>Shopping List</strong> ';
 
-const forms = Array.from(document.forms);
+// Change styles
+title.style.color = 'red';
+title.style.backgroundColor = 'black';
+title.style.padding = '10px';
+title.style.borderRadius = '10px';
 
-forms.forEach((form) => console.log(form));
+// document.querySelector()
 
-console.log(output);
+console.log(document.querySelector('h1'));
+console.log(document.querySelector('#app-title'));
+console.log(document.querySelector('.container'));
+console.log(document.querySelector('input[type="text"]'));
+console.log(document.querySelector('li:nth-child(2)').innerText); //orange juice
+const secondItem = document.querySelector('li:nth-child(2)');
+secondItem.innerText = 'Apple Juice';
+secondItem.style.color = 'red';
+
+//Use these methods on other elements
+const list = document.querySelector('ul');
+console.log(list);
+const firstItem = list.querySelector('li');
+firstItem.style.color = 'blue';
