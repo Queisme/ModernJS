@@ -4,10 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title></title>
+    <title>Custom insertAfter() Challenge</title>
   </head>
   <body>
-    <h1></h1>
+    <h1>Custom insertAfter() Challenge</h1>
+    <h3>Instructions:</h3>
+    <p>
+      You may think since there is an insertBefore() method, there is also an
+      insertAfter(), but there isn't. In this chalenge, I want you to create a
+      custom insertAfter() function. If you don't want to do it as a challenge,
+      that's fine, just follow along.
+    </p>
+
+    <ul>
+      <li>
+        The first param will be newEl which will be a new element that you
+        create with document.createElement()
+      </li>
+      <li>
+        The second param will be existingEl which is an element in the DOM that
+        you want to insert your new element after
+      </li>
+    </ul>
+
+    <p>The function will be called like this:</p>
+
+    //new element to insert//<br><br>
+    const li = document.createElement('li');<br>
+    li.textContent = 'Insert Me After!';<br>
+    <br>
+    //Existing element to insert after//<br><br>
+    const firstItem = document.querySelector('li:first-child');<br> 
+    <br>
+    //Our custom function//<br><br>
+    insertAfter(li, firstItem);
 
     <script src="script.js"></script>
   </body>
