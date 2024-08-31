@@ -255,21 +255,85 @@
 // player1.getMarker(); // My marker is: X.
 // player2.getMarker(); // My marker is: O.
 
-function Rectangle(name, width, length) {
-  this.name = name;
-  this.width = width;
-  this.length = length;
+// function Rectangle(name, width, length) {
+//   this.name = name;
+//   this.width = width;
+//   this.length = length;
+// }
+
+// Rectangle.prototype.area = function () {
+//   return this.width * this.length;
+// };
+
+// Rectangle.prototype.perimeter = function () {
+//   return (this.width + this.length) * 2;
+// };
+
+// Rectangle.prototype.isSquare = function () {
+//   return this.width === this.length;
+// };
+
+// Rectangle.prototype.changeName = function (newName) {
+//   return (this.name = newName);
+// };
+
+// const rect = new Rectangle('Rect', 10, 10);
+// console.log(rect);
+
+// console.log(rect.area());
+// console.log(rect.perimeter());
+// console.log(rect.isSquare());
+// console.log(rect.changeName('Tony'));
+// console.log(rect);
+// console.log(Rectangle.prototype);
+
+// function Rectangle(height, width) {
+//   this.height = height;
+//   this.width = width;
+// }
+
+// Rectangle.prototype.area = function () {
+//   return this.height * this.width;
+// };
+
+// Rectangle.prototype.perimeter = function () {
+//   return 2 * (this.height + this.width);
+// };
+
+// Rectangle.prototype.isSquare = function () {
+//   return this.height === this.width;
+// };
+
+// const rectangle1 = new Rectangle(4, 4);
+// console.log(rectangle1.isSquare(), rectangle1.area());
+
+const rectanglePrototypes = {
+  area: function () {
+    return this.width * this.height;
+  },
+  preimeter: function () {
+    return 2 * (this.width + this.height);
+  },
+  isSquare: function () {
+    return this.height === this.width;
+  },
+};
+
+function createRectangle(height, width) {
+  return Object.create(rectanglePrototypes, {
+    height: {
+      value: height,
+    },
+    width: {
+      value: width,
+    },
+  });
 }
 
-Rectangle.prototype.area = function () {
-  return this.width * this.length;
-};
-
-Rectangle.prototype.perimeter = function () {
-  return (this.width + this.length) * 2;
-};
-
-const rect = new Rectangle('Rect', 10, 10);
+const rect = createRectangle(10, 20);
 console.log(rect);
-
 console.log(rect.area());
+console.log(rect.isSquare());
+
+const rect2 = createRectangle(20, 20);
+console.log(rect2.area());
