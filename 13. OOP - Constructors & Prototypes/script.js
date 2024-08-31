@@ -307,33 +307,72 @@
 // const rectangle1 = new Rectangle(4, 4);
 // console.log(rectangle1.isSquare(), rectangle1.area());
 
-const rectanglePrototypes = {
-  area: function () {
-    return this.width * this.height;
-  },
-  preimeter: function () {
-    return 2 * (this.width + this.height);
-  },
-  isSquare: function () {
-    return this.height === this.width;
-  },
-};
+// const rectanglePrototypes = {
+//   area: function () {
+//     return this.width * this.height;
+//   },
+//   preimeter: function () {
+//     return 2 * (this.width + this.height);
+//   },
+//   isSquare: function () {
+//     return this.height === this.width;
+//   },
+// };
 
-function createRectangle(height, width) {
-  return Object.create(rectanglePrototypes, {
-    height: {
-      value: height,
-    },
-    width: {
-      value: width,
-    },
-  });
-}
+// function createRectangle(height, width) {
+//   return Object.create(rectanglePrototypes, {
+//     height: {
+//       value: height,
+//     },
+//     width: {
+//       value: width,
+//     },
+//   });
+// }
 
-const rect = createRectangle(10, 20);
-console.log(rect);
-console.log(rect.area());
-console.log(rect.isSquare());
+// const rect = createRectangle(10, 20);
+// console.log(rect);
+// console.log(rect.area());
+// console.log(rect.isSquare());
 
-const rect2 = createRectangle(20, 20);
-console.log(rect2.area());
+// const rect2 = createRectangle(20, 20);
+// console.log(rect2.area());
+
+// function Person(name) {
+//   this.name = name;
+// }
+
+// Person.prototype.sayName = function () {
+//   console.log(`Hello, I'm ${this.name}!`);
+// };
+
+// function Player(name, marker) {
+//   this.name = name;
+//   this.marker = marker;
+// }
+
+// Player.prototype.getMarker = function () {
+//   console.log(`My marker is '${this.marker}'`);
+// };
+
+// console.log(Object.getPrototypeOf(Player.prototype)); // returns Object.prototype
+
+// console.log(Object.getPrototypeOf(Person.prototype));
+
+// // Now make `Player` objects inherit from `Person`
+// Object.setPrototypeOf(Player.prototype, Person.prototype);
+
+// console.log(Object.getPrototypeOf(Player.prototype)); // returns Person.prototype
+
+// const player1 = new Player('steve', 'X');
+// const player2 = new Player('also steve', 'O');
+
+// player1.sayName(); // Hello, I'm steve!
+// player2.sayName(); // Hello, I'm also steve!
+
+// player1.getMarker(); // My marker is 'X'
+// player2.getMarker(); // My marker is 'O'
+
+// function Shape(name) {
+//   this.name = name;
+// }
