@@ -6,7 +6,7 @@
 
 // RECOMMENDED: Use addEventListener method
 
-//difference between using arrow functions and regulat functions -- can't use name of function is using an arrow function -- use regular functions is you have to do the same function over and over then just use the function name
+//difference between using arrow functions and regular functions -- can't use name of function is using an arrow function -- use regular functions is you have to do the same function over and over then just use the function name
 
 // const clearBtn = document.querySelector('#clear');
 
