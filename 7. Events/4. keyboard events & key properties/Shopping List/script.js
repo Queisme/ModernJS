@@ -10,13 +10,34 @@ const onKeyUp = (e) => {
 
 const onKeyDown = (e) => {
   // key
-  console.log(e.key);
+  // console.log(e.key);
+  // if (e.key === 'Enter') {
+  //   alert('You pressed Enter');
+  // }
 
   // keyCode
-  https://www.toptal.com/developers/keycode/table-of-all-keycodes
-
+  //www.toptal.com/developers/keycode/table
+  // https: if (e.keyBode === 13) {
+  //   console.log('You pressed Enter');
+  // }
 
   // code
+  console.log(e.code);
+  if (e.code === 'Digit1') {
+    console.log('You pressed one.');
+  }
+
+  if (e.repeat) {
+    console.log('You are holding down ' + e.key);
+  }
+
+  console.log('Shift: ' + e.shiftKey);
+  console.log('Control: ' + e.ctrlKey);
+  console.log('Alt: ' + e.altKey);
+
+  if (e.shiftKey && e.key === 'K') {
+    console.log('You hit shift + k');
+  }
 };
 
 // itemInput.addEventListener('keypress', onKeyPress);
