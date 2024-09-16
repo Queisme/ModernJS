@@ -16,6 +16,7 @@ const arr2 = [5, 6, 7, 8, 9, 10];
 // const arr3 = [...arr1, ...arr2];
 
 const arr3 = arr1.slice(0, 4).concat(arr2);
+
 const arr4 = [...arr1, ...arr2];
 arr4.splice(4, 1);
 

@@ -20,6 +20,14 @@ const todo = {
   },
 };
 
+// const {
+//   id,
+//   title,
+//   user: { name },
+// } = todo;
+
+// console.log(name);
+
 const {
   id: todoId,
   title,

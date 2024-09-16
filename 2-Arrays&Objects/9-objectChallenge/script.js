@@ -1,6 +1,7 @@
 // Step 1
 
-const library = [
+const library = 
+[
   {
     title: 'Whatever',
     author: 'Some Guy',

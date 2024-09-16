@@ -6,10 +6,10 @@ const post = {
 
 // Convert to JSON string
 
-const str = JSON.stringify(post);
+const str = JSON.stringify(post); //turns to JSON string
 
 // Parse JSON
-const obj = JSON.parse(str);
+const obj = JSON.parse(str); //undoes from JSON string
 
 console.log(obj);
 
